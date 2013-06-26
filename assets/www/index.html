@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+    <title>Audero Audio Player</title>
+    <link rel="stylesheet" href="css/jquery.mobile.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  </head>
+  <body>
+    <div id="home-page" data-role="page">
+      <div data-role="header">
+        <h1>Audero Audio Player</h1>
+      </div>
+
+      <div data-role="content">
+        <p id="app-description">
+          Audero Audio Player is a basic audio player that searches the file system of a device, collects the audio files found and then allows the user to listen to them. This app also enables the user to update the list at any time to include files that might have been downloaded after running the operation for the first time. You can also remove any unwanted audio - for example, sounds used as notifications in other applications - by clicking an icon on the right side of the song name. The sound list is ordered alphabetically with letter dividers to organize and group list items, and it has a search box to filter files. You can see the described page by looking at the screenshot below.
+        </p>
+        <a href="files-list.html" data-role="button">File List</a>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <h3 id="copyright-title">Created by Mateo Quintero</h3>
+        <a href="mateo.html" id="credits-button" data-icon="info" data-iconpos="notext" class="ui-btn-right">Credits</a>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.config.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+    <script type="text/javascript" src="js/appFile.js"></script>
+    <script  src="jtype="text/javascript"/application.js"></script>
+    <script type="text/javascript" src="js/ultility.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script>
+        $(document).on('pagebeforecreate orientationchange', Application.updateIcons);
+        $(document).one('deviceready', Application.initApplication);
+    </script>
+  </body>
+</html>
